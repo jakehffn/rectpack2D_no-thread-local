@@ -226,7 +226,7 @@ namespace rectpack2D {
 			It is always reset before any packing attempt.
 		*/
 
-		thread_local empty_spaces_type root = rect_wh();
+		static empty_spaces_type root = rect_wh();
 		root.flipping_mode = input.flipping_mode;
 
 		for_each_order ([&](OrderType& current_order) {
