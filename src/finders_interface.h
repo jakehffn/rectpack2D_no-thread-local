@@ -80,7 +80,7 @@ namespace rectpack2D {
 		using order_type = std::vector<rect_type*>;
 
 		constexpr auto count_orders = 1 + sizeof...(Comparators);
-		thread_local std::array<order_type, count_orders> orders;
+		static std::array<order_type, count_orders> orders;
 
 		{
 			/* order[0] will always exist since this overload requires at least one comparator */
